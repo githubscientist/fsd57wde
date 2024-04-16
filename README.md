@@ -40,5 +40,5 @@ Components are the building blocks of a React application. A component is a reus
 Component name must start with a capital letter.
 
 - [x] Understanding the components
-- [] Passing data through props
+- [x] Passing data through props
 - [] Deploying react to netlify
