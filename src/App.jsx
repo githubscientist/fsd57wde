@@ -1,11 +1,17 @@
-const App = () => {
-
-  // console.log('Hello, World!');
-  // Get the current date and time
-  const now = new Date();
-
+const Hello = () => {
   return (
-    <p>Hello <strong>World</strong>, it is <em>{ now.toString() }</em></p>
+    <p>Hi User! Welcome to our Application!</p>
+  )
+}
+
+const App = () => {
+  return (
+    <div>
+      <h1>Greetings!</h1>
+      <Hello />
+      <Hello />
+      <Hello />
+    </div>
   )
 }
 
