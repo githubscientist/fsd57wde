@@ -1,8 +1,4 @@
-const Hello = () => {
-  return (
-    <p>Hi User! Welcome to our Application!</p>
-  )
-}
+import Hello from "./components/Hello";
 
 const App = () => {
   return (
