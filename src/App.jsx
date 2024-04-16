@@ -1,6 +1,11 @@
 const App = () => {
+
+  // console.log('Hello, World!');
+  // Get the current date and time
+  const now = new Date();
+
   return (
-    <h1>Hello, World!</h1>
+    <p>Hello <strong>World</strong>, it is <em>{ now.toString() }</em></p>
   )
 }
 
