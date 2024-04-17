@@ -1,19 +1,10 @@
-import Note from "./components/Note";
+const App = () => {
 
-const App = (props) => {
-
-  console.log(props);
+  const handleClick = () => console.log('Increment button is clicked')
 
   return (
     <div>
-      <h1>Notes</h1>
-      <ul>
-        {
-          props.notes.map(note => 
-            <Note note={ note } key={note.id} />
-          )
-        }
-      </ul>
+      <button onClick={handleClick}>Increment</button>
     </div>
   )
 }
