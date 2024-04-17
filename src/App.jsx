@@ -1,32 +1,15 @@
-import Card from './components/Card';
+const App = (props) => {
 
-const App = () => {
-
-  const data = [
-    {
-      price: 0,
-      users: 'Single User'
-    },
-    {
-      price: 9,
-      users: '5 Users',
-    },
-    {
-      price: 49,
-      users: 'Unlimited Users'
-    }
-  ]
-
-  const styles = {
-    display: 'flex',
-    gap: '20px',
-  }
+  console.log(props);
 
   return (
-    <div style={styles}>
-      <Card data={ data[0] } />
-      <Card data={ data[1] } />
-      <Card data={ data[2] } />
+    <div>
+      <h1>Notes</h1>
+      <ul>
+        <li>{props.notes[0].content}</li>
+        <li>{props.notes[1].content}</li>
+        <li>{props.notes[2].content}</li>
+      </ul>
     </div>
   )
 }

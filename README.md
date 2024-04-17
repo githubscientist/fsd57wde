@@ -9,7 +9,7 @@
 
 ## Contents:
 
--[] Working with array lists
+-[x] Working with array lists
 -[] Usage of keys
 -[] Conditional rendering
 -[] Handling Events
