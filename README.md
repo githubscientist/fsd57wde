@@ -2,7 +2,7 @@
 
 ## Doubts
 
--[] react card task - using normal css and bootstrap
+-[x] react card task - using normal css and bootstrap --pending
 -[] props
 
 # React- Day -3: React hooks & states
