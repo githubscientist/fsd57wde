@@ -10,9 +10,15 @@
 ## Contents:
 
 -[x] Working with array lists
--[] Usage of keys
--[] Conditional rendering
--[] Handling Events
+
+When we are working with array lists, we need to use `map` function to iterate over the array and display the elements.
+
+-[x] Usage of keys
+
+Keys are used to identify the elements in the list. It helps react to identify the elements and update the DOM efficiently.
+
+-[x] Conditional rendering  
+-[] Handling Events  
 -[] Props vs State
 
 ## Task

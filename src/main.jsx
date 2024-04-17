@@ -27,7 +27,7 @@ const notes = [
     id: 4,
     content: 'React is a library for building user interfaces',
     date: '2019-05-30T19:20:14.298Z',
-    important: true
+    important: false
   }
 ];
 

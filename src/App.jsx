@@ -1,3 +1,5 @@
+import Note from "./components/Note";
+
 const App = (props) => {
 
   console.log(props);
@@ -8,7 +10,7 @@ const App = (props) => {
       <ul>
         {
           props.notes.map(note => 
-            <li key={note.id}>{ note.content }</li>
+            <Note note={ note } key={note.id} />
           )
         }
       </ul>
