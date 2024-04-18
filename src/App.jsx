@@ -26,9 +26,9 @@ class App extends Component {
       counter: this.state.counter + 1
     })
   }
- 
+
   render() {
-    console.log(`rendering...${this.state.counter}`);
+    console.log(`rendering...${this.state.counter}`)
     return (
       <div>
         <Counter counter={ this.state.counter } />

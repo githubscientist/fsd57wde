@@ -60,3 +60,5 @@ this.year = year;
 Create an object to Audi:
 
 let audi = new Audi('A6', 2021, 'black', 5000000)
+
+- If you pass a state as a prop from a parent component to a child component. Any change in the state of the parent component will be reflected in the child component props as well. The state change will re-render the child component.
