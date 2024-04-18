@@ -1,24 +1,14 @@
-// const App = () => {
-//   return (
-//     <>
-//       <h1>Hello, World!</h1>
-//       <p>This is a simple component</p>
-//     </>
-//   )
-// }
+import Hello from "./components/Hello";
 
-// export default App;
+const App = () => {
 
-import { Component } from 'react';
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello, World!</h1>
-        <p>This is a simple component</p>
-      </div>
-    )
-  }
+  const user = 'John Doe';
+
+  return (
+    <div>
+      <Hello user={ user } />
+    </div>
+  )
 }
 
 export default App;
