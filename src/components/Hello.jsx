@@ -1,7 +1,12 @@
-const Hello = ({ user }) => {
-  return (
-      <p>Hello { user }!</p>
-  )
+import { Component } from "react";
+
+class Hello extends Component {
+    render() {
+
+        return (
+            <p>Hello { this.props.user }!</p>
+        )
+    }
 }
 
 export default Hello;

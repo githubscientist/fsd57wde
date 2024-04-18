@@ -1,14 +1,17 @@
+import { Component } from "react";
 import Hello from "./components/Hello";
 
-const App = () => {
+class App extends Component {
 
-  const user = 'John Doe';
+  render() {
+    const user = 'John Doe';
 
-  return (
-    <div>
-      <Hello user={ user } />
-    </div>
-  )
+    return (
+      <div>
+        <Hello user={ user } />
+      </div>
+    )
+  }
 }
 
 export default App;
