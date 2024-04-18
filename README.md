@@ -30,8 +30,33 @@ Exercise:
 
 - Create the above component using both functional component syntax and class component syntax.
 
-  -[] Component life cycle  
-  -[] Stateful and stateless components  
-  -[] Reusable components  
-  -[] Passing dynamic data to component  
-  -[] Introduction to Hook
+  -[x] Stateful and stateless components
+
+- State: State is a built-in React object that allows you to store data that affects the way a component renders. Only class components can have state. The functional components are stateless components.
+
+- Change/Update in the state will re-render the component.
+
+  -[x] Reusable components  
+  -[x] Passing dynamic data to component  
+  -[] Component life cycle methods  
+  -[x] Introduction to Hook
+
+parent class Car:
+
+- color
+- price
+
+child class Audi:
+
+- model
+- year
+
+consructor(model, year, color, price){
+Super(color, price);
+this.model = model;
+this.year = year;
+}
+
+Create an object to Audi:
+
+let audi = new Audi('A6', 2021, 'black', 5000000)
