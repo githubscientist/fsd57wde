@@ -1,44 +1,37 @@
-# React- Day -2: React
+## React- Day -4: React components
 
-## Contents:
+### Contents:
 
-- [x] Why react
+-[x] Components - In-depth
 
-React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
+Components are the building blocks of any React application. A React application is made up of multiple components, each responsible for rendering a small, reusable piece of HTML. Components can be nested within other components to allow complex applications to be built out of simple building blocks.
 
-Next.js is a React framework that allows you to build static and server-rendered applications using React and JavaScript.
+Components are the heart of React's powerful, declarative programming model. React components can be defined by subclassing `React.Component` or by using a functional component.
 
-Client Side Rendering (CSR) - It means that the page is rendered in the browser using JavaScript. The server sends a blank HTML page and the browser loads the JavaScript and renders the page.
+#### Functional Components
 
-Server Side Rendering (SSR) - It means that the page is rendered on the server and the server sends the fully rendered HTML page to the browser.
+- Functional components are the simplest way to define a component in React. They are just plain JavaScript functions that return React elements.
 
-Single Page Application (SPA) - It is a web application that fits on a single page. It is built using JavaScript and it communicates with the server using APIs.
+- Functional components are also often referred to as `stateless components` as they simply accept data and display them in some form, that they are mainly responsible for rendering UI.
 
-- [x] Setup react project
+#### Class Components
 
-- Using Vite to create a new React project:
+- Class components are ES6 classes that extend from `React.Component`. They must include the `render` method, and the return value from this method is the description of the component's UI.
 
-```bash
-npm create vite@latest
-```
+- Class components can have `state` and `lifecycle methods`, which are not available in functional components.
 
-- provide the project name
-- select the framework (React)
-- select the variant (JavaScript)
-- cd into the project directory
-- run `npm install` to install the dependencies
-- run `npm run dev` to start the development server
+- Class components are also called `stateful components` as they implement logic and state.
 
-- [x] Understanding JSX
+- Functional Components are better in performance than class components. Functional components are the future of React. They are easier to read, write, and test. They are used widely in the industry.
 
-JSX: JavaScript XML allows you to write HTML in React. JSX makes it easier to write and add HTML in React.
+Exercise:
 
-- [x] Components (simple HTML layout to reusable react components)
+- Create a component that has heading, paragraph. The heading should show "Hello, World!" and the paragraph should show "This is a simple component".
 
-Components are the building blocks of a React application. A component is a reusable piece of code that can be used to build other components.
+- Create the above component using both functional component syntax and class component syntax.
 
-Component name must start with a capital letter.
-
-- [x] Understanding the components
-- [] Passing data through props
-- [] Deploying react to netlify
+  -[] Component life cycle  
+  -[] Stateful and stateless components  
+  -[] Reusable components  
+  -[] Passing dynamic data to component  
+  -[] Introduction to Hook
