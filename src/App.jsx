@@ -1,5 +1,13 @@
 import { Component } from 'react';
 
+class Counter extends Component {
+  render() {
+    return (
+      <p>Counter: {this.props.counter}</p>
+    )
+  }
+}
+
 class App extends Component {
 
   constructor(props) {
@@ -23,7 +31,7 @@ class App extends Component {
     console.log(`rendering...${this.state.counter}`);
     return (
       <div>
-        <p>Counter: {this.state.counter}</p>
+        <Counter counter={ this.state.counter } />
         <button onClick={this.handleIncrement}>Increment</button>
       </div>
     )
