@@ -35,7 +35,7 @@ const App = ({ notes }) => {
       </ul>
       <form onSubmit={addNote}>
         <input type="text" />
-        <button type="submit" className="btn btn-primary">save</button>
+        <button type="submit" className="btn btn-info">save</button>
       </form>
     </div>
   )
