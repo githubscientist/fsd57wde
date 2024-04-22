@@ -12,11 +12,22 @@ React- Day -5: React Hooks
 
 ## Contents:
 
-What is the hook?
-Lifecycle of Hook
-useState, useEffect
-Props drilling
-Passing data from child to parent component
+[x] What is the hook?
+
+- A hook is a function that lets you “hook into” React features from function components. Hooks don’t work inside classes — they let you use React without classes.
+
+- Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class.
+
+- Examples: useState, useEffect, useContext, useReducer, useRef,...
+
+[x] Lifecycle of Hook
+
+- useState: useState is a Hook that allows you to have state variables in functional components.
+- useEffect: useEffect is a Hook that allows you to have side effects in functional components.
+
+  [x] useState, useEffect  
+  [] Props drilling  
+  [] Passing data from child to parent component
 
 Task:
 

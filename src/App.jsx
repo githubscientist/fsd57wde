@@ -1,41 +1,21 @@
-import { Component } from 'react';
+import { useState } from "react";
 
-class App extends Component {
+const App = () => {
 
-  constructor(props) {
-    super(props); // call the parent constructor
+  const [plusCount, setPlusCount] = useState(0);
+  const [minusCount, setMinusCount] = useState(0);
+  const [zeroCount, setZeroCount] = useState(0);
 
-    this.state = {
-      counter: 0
-    };
-
-    console.log('Constructor');
-  }
-
-  componentDidMount() {
-    console.log('Component did mount');
-    // Fetch data from API
-    // Set a subscription
-  }
-
-  componentDidUpdate() {
-    console.log('Component did update');
-  }
-
-  handleClick = () => {
-    this.setState({
-      counter: this.state.counter + 1
-    });
-  }
-
-  render() {
-    return (
-      <div>
-        <p>Counter: { this.state.counter }</p>
-        <button onClick={this.handleClick}>Increment</button>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <p>plus count: {plusCount}</p>
+      <p>minus count: {minusCount}</p>
+      <p>zero count: {zeroCount}</p>
+      <button onClick={() => { setPlusCount(plusCount + 1) }}>plus</button>
+      <button onClick={() => { setMinusCount(minusCount + 1) }}>minus</button>
+      <button onClick={() => { setZeroCount(zeroCount+ 1) }}>zero</button>
+    </div>
+  )
 }
 
 export default App;
