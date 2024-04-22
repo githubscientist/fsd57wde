@@ -32,7 +32,10 @@ React- Day -5: React Hooks
 
 - useState should not be called inside loops, conditions, or nested functions including useEffect.
 
-  [] Props drilling  
+  [x] Props drilling
+
+- Props drilling is the process of passing data from one component to another by going through other components in between.
+
   [] Passing data from child to parent component
 
 Task:
