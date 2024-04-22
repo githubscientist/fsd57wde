@@ -1,9 +1,10 @@
 import Header from "./Header";
 
-const Child = (props) => {
+const Child = ({ name, setName }) => {
   return (
     <div>
-      <Header name={ props.name } />
+      <Header name={name} />
+      <button onClick={() => { setName('Sathish') }}>Update Name</button>
     </div>
   )
 }

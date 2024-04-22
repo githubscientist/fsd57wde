@@ -6,7 +6,9 @@ const App = () => {
 
   return (
     <div>
-      <Child name={ name } />
+      <Child name={name} 
+        setName={setName}
+      />
     </div>
   )
 }
