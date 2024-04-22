@@ -25,7 +25,13 @@ React- Day -5: React Hooks
 - useState: useState is a Hook that allows you to have state variables in functional components.
 - useEffect: useEffect is a Hook that allows you to have side effects in functional components.
 
-  [x] useState, useEffect  
+  [x] useState, useEffect
+
+- useEffect: useEffect is a Hook that allows you to have side effects in functional components.
+- useEffect should not be called inside loops, conditions, or nested functions.
+
+- useState should not be called inside loops, conditions, or nested functions including useEffect.
+
   [] Props drilling  
   [] Passing data from child to parent component
 
