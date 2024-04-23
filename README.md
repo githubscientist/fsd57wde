@@ -41,3 +41,9 @@ React- Day -5: React Hooks
 Task:
 
 https://docs.google.com/document/d/1frCM6keoI6YKQqxm0XbgEP2CCZjDH5Zi8wEp_NXtk2g/edit
+
+Exercise on useState, useEffect and passing data from child to parent component:
+
+- Create a parent component that has a button and a text field.
+- Create a child component that has a text field.
+- When the button is clicked, the text field in the parent component should be updated with the value of the text field in the child component.
