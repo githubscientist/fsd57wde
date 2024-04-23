@@ -1,44 +1,15 @@
-# React- Day -2: React
+## React- Day -6: Router
 
-## Contents:
+### Contents:
 
-- [x] Why react
+-[x] react-router-dom
 
-React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
+React Router DOM:
 
-Next.js is a React framework that allows you to build static and server-rendered applications using React and JavaScript.
+In traditional web development, we have multiple pages and we navigate between them using hyperlinks. In a single-page application, we have only one page and we change what is displayed on that page using JavaScript. React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps UI in sync with the URL.
 
-Client Side Rendering (CSR) - It means that the page is rendered in the browser using JavaScript. The server sends a blank HTML page and the browser loads the JavaScript and renders the page.
+V6.4  
+-[x] BrowserRouter, Routes, Link, Route, URL params
 
-Server Side Rendering (SSR) - It means that the page is rendered on the server and the server sends the fully rendered HTML page to the browser.
-
-Single Page Application (SPA) - It is a web application that fits on a single page. It is built using JavaScript and it communicates with the server using APIs.
-
-- [x] Setup react project
-
-- Using Vite to create a new React project:
-
-```bash
-npm create vite@latest
-```
-
-- provide the project name
-- select the framework (React)
-- select the variant (JavaScript)
-- cd into the project directory
-- run `npm install` to install the dependencies
-- run `npm run dev` to start the development server
-
-- [x] Understanding JSX
-
-JSX: JavaScript XML allows you to write HTML in React. JSX makes it easier to write and add HTML in React.
-
-- [x] Components (simple HTML layout to reusable react components)
-
-Components are the building blocks of a React application. A component is a reusable piece of code that can be used to build other components.
-
-Component name must start with a capital letter.
-
-- [x] Understanding the components
-- [] Passing data through props
-- [] Deploying react to netlify
+-[] session task on the admin dashboard
+https://startbootstrap.com/previews/sb-admin-2
