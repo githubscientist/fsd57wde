@@ -1,12 +1,16 @@
-const Child = () => {
+import { useState } from "react";
+
+const Child = ({ updateParentText }) => {
+
+  const [childInput, setChildInput] = useState('');
 
   const handleClick = (e) => {
-    // get the data from the input field
-    // const childInput = document.querySelector('input[name="childInput"]').value;
     e.preventDefault();
+    updateParentText(childInput);
+  }
 
-    // console.log(e.target.form.elements[0].value);
-    console.log(e.target.form.elements.childInput.value);
+  const updateInput = (e) => {
+    setChildInput(e.target.value);
   }
 
   return (
@@ -16,6 +20,8 @@ const Child = () => {
           type="text"
           placeholder="Child Component..."
           name="childInput"
+          value={childInput}
+          onChange={updateInput}
         />
         <button onClick={handleClick}>Send to Parent</button>
       </form>

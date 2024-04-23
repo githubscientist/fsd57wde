@@ -1,6 +1,13 @@
+import { useState } from "react";
 import Child from "./components/Child";
 
 const App = () => {
+
+  const [parentInput, setParentInput] = useState('');
+
+  const updateParentText = (childText) => {
+    setParentInput(childText);
+  }
   
   return (
     <div>
@@ -9,8 +16,12 @@ const App = () => {
         type='text'
         placeholder='Parent Component...'
         id="parentInput"
+        value={parentInput}
+        onChange={(e) => setParentInput(e.target.value)}
       />
-      <Child />
+      <Child 
+        updateParentText={updateParentText}
+      />
     </div>
   )
 }
