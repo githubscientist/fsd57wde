@@ -1,18 +1,24 @@
-import { useState } from "react";
-import Header from "./Header";
-
 const Child = () => {
 
-  const [name, setName] = useState("");
+  const handleClick = (e) => {
+    // get the data from the input field
+    // const childInput = document.querySelector('input[name="childInput"]').value;
+    e.preventDefault();
 
-  const updateName = (value) => {
-    setName(value);
+    // console.log(e.target.form.elements[0].value);
+    console.log(e.target.form.elements.childInput.value);
   }
 
   return (
     <div>
-      <h1>Child Component: { name.length }</h1>
-      <Header updateName={ updateName } />
+      <form>
+        <input 
+          type="text"
+          placeholder="Child Component..."
+          name="childInput"
+        />
+        <button onClick={handleClick}>Send to Parent</button>
+      </form>
     </div>
   )
 }
