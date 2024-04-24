@@ -11,7 +11,7 @@ const Login = () => {
                 <input type="password" id="password" name="password" />
                 <button type="submit">Login</button>
       </form>
-      <p>Forgot your password? <Link to="/login/forgot-password">Click here</Link></p>
+      <p>Forgot your password? <Link to="forgot-password">Click here</Link></p>
       <Outlet />
     </div>
   )
