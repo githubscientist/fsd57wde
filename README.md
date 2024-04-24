@@ -1,15 +1,36 @@
-## React- Day -6: Router
+User Story:
 
-### Contents:
+- As a user, I want to land on a page that explains everything about the company, the services we provide, the benefits of using our services, and how to contact us.
 
--[x] react-router-dom
+Tasks:
 
-React Router DOM:
+## Design
 
-In traditional web development, we have multiple pages and we navigate between them using hyperlinks. In a single-page application, we have only one page and we change what is displayed on that page using JavaScript. React Router is a standard library for routing in React. It enables the navigation among views of various components in a React Application, allows changing the browser URL, and keeps UI in sync with the URL.
+    - Create a wireframe
+    - Create a color scheme
+    - Create a logo
+    - Create a font scheme
 
-V6.4  
--[x] BrowserRouter, Routes, Link, Route, URL params
+## Development
 
--[] session task on the admin dashboard
-https://startbootstrap.com/previews/sb-admin-2
+- Create a home page
+
+  - Add a navigation bar
+  - Add a header
+  - Add a section that explains the company
+  - Add a section that explains the services
+  - Add a section that explains the benefits
+  - Add a section that explains how to contact us
+
+    - Trigger an email to be sent to the company
+    - Trigger an sms to be sent to the company
+    - Sending an thank you email to the user
+
+  - Add a footer
+
+## Testing
+
+- Test the home page on different devices
+- Test the home page on different browsers
+
+## Merge the feature branch to the main branch
