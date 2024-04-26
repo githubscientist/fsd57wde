@@ -1,37 +1,35 @@
 import { useState } from "react";
-import Card from "./Card";
-
-const products = [
-    {
-        id: 1,
-        name: 'Product 1',
-        price: 100
-    },
-    {
-        id: 2,
-        name: 'Product 2',
-        price: 200
-    },
-    {
-        id: 3,
-        name: 'Product 3',
-        price: 300
-    }
-]
+import ChildComponent from "./components/ChildComponent";
 
 const App = () => {
 
-    const [cart, setCart] = useState([]);
+    const [message, setMessage] = useState('Hello, Grand Child!');
+    const [tasks, setTasks] = useState([
+        {
+            id: 1,
+            title: 'Task 1',
+            completed: false
+        },
+        {
+            id: 2,
+            title: 'Task 2',
+            completed: true
+        },
+        {
+            id: 3,
+            title: 'Task 3',
+            completed: false
+        }
+    ]);
 
   return (
-    <div className="container">
-          <div className="row">
-              {
-              products.map(product => (
-                  <Card key={product.id} product={product} cart={cart} setCart={setCart} />
-              ))
-        }
-          </div>
+      <div>
+        <h1>Parent Component</h1>
+        <hr />
+          <ChildComponent
+              tasks={tasks} 
+              setTasks={setTasks}
+              />
     </div>
   )
 }
