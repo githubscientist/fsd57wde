@@ -27,3 +27,11 @@ https://reactjs.org/docs/context.html
 https://reactjs.org/docs/hooks-reference.html#usestate
 
 https://docs.google.com/document/d/1ft6tjqQj6dsLbHJ1t2fPHgTQRSZwAE-qBzlxqTqWezw/edit#
+
+Exercise:
+
+The application has a Notification component for displaying notifications to the user.
+
+Implement the application's notification state management using the Context API. The notification should tell the user when a new task has been added or removed.
+
+The notification is displayed for five seconds.
