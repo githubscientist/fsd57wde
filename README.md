@@ -8,8 +8,14 @@
 
 ## Contents:
 
--[] Context-API
--[] What is context, provide, createContext  
+-[x] Context-API
+
+context API is a way to pass data through the component tree without having to pass props down manually at every level.
+
+-[x] What is context, provide, createContext
+
+context: Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
 -[x] Avoid props drilling
 
 props drilling: passing props from parent to child to grandchild and so on.

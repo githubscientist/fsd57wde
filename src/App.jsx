@@ -1,35 +1,20 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import ChildComponent from "./components/ChildComponent";
+
+// Create a context for sharing the message state to the entire component tree
+export const MessageContext = createContext();
 
 const App = () => {
 
     const [message, setMessage] = useState('Hello, Grand Child!');
-    const [tasks, setTasks] = useState([
-        {
-            id: 1,
-            title: 'Task 1',
-            completed: false
-        },
-        {
-            id: 2,
-            title: 'Task 2',
-            completed: true
-        },
-        {
-            id: 3,
-            title: 'Task 3',
-            completed: false
-        }
-    ]);
 
   return (
-      <div>
+    <div>
         <h1>Parent Component</h1>
         <hr />
-          <ChildComponent
-              tasks={tasks} 
-              setTasks={setTasks}
-              />
+        <MessageContext.Provider value={{message}}>
+            <ChildComponent />
+        </MessageContext.Provider>
     </div>
   )
 }

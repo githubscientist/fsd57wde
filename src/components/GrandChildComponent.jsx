@@ -1,15 +1,14 @@
-const GrandChildComponent = ({ tasks }) => {
+import { useContext } from "react";
+import { MessageContext } from "../App";
+
+const GrandChildComponent = () => {
+
+    const { message } = useContext(MessageContext);
+
   return (
       <div>
           <h3>Grand Child Component</h3>
-          <p>Message from parent: </p>
-          <ul>
-              {
-                  tasks.map(task => (
-                        <li key={task.id}>{ task.title }</li>
-                  ))
-              }
-          </ul>
+          <p>Message from parent: { message }</p>
     </div>
   )
 }
