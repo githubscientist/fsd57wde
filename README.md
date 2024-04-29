@@ -2,9 +2,11 @@
 
 ### Contents:
 
--[] useRef, useReducer
+-[x] useRef, useReducer
 
 useRef: to access the DOM element directly
+
+useReducer: to manage the state of the component
 
 -[] Front end game demonstration - hangman / tictactoe / tile match
 

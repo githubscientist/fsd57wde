@@ -1,24 +1,19 @@
-import { useRef } from "react";
+import { useReducer } from "react";
+import { initialState, reducer } from "./reducers/countReducer";
 
 const App = () => {
 
-    // create a reference using useRef hook
-    const inputRef = useRef(null);
-
-    const handleClick = () => {
-        console.log(inputRef.current.value);
-    }
+    const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-      <>
-          <input 
-            type="text"
-            placeholder="enter a note..."
-            ref={inputRef}
-        />
+      <div>
+          <h3>Counter: { state.count }</h3>
+          <button onClick={() => dispatch({ type: 'incr' })}>Increment</button>
+          
+          <button onClick={() => dispatch({ type: 'decr' })}>Decrement</button>
 
-        <button onClick={handleClick}>Add Note</button>
-      </>
+          <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
+    </div>
   )
 }
 
