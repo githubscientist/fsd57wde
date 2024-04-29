@@ -1,6 +1,24 @@
+import { useRef } from "react";
+
 const App = () => {
+
+    // create a reference using useRef hook
+    const inputRef = useRef(null);
+
+    const handleClick = () => {
+        console.log(inputRef.current.value);
+    }
+
   return (
-    <h1>Hello, World!</h1>
+      <>
+          <input 
+            type="text"
+            placeholder="enter a note..."
+            ref={inputRef}
+        />
+
+        <button onClick={handleClick}>Add Note</button>
+      </>
   )
 }
 
