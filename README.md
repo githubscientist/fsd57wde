@@ -35,3 +35,13 @@ The application has a Notification component for displaying notifications to the
 Implement the application's notification state management using the Context API. The notification should tell the user when a new task has been added or removed.
 
 The notification is displayed for five seconds.
+
+Props Drilling:
+
+App [Create Context - data: x, y, z, methoda]
+
+- Comp1
+  - Comp3
+  - Comp4
+- Comp2
+  - Comp5 [Using Context - data: x, y, z, methoda]
