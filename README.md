@@ -38,10 +38,23 @@ The notification is displayed for five seconds.
 
 Props Drilling:
 
-App [Create Context - data: x, y, z, methoda]
+App [Create Context - data: notes, addNote]
 
-- Comp1
-  - Comp3
-  - Comp4
-- Comp2
-  - Comp5 [Using Context - data: x, y, z, methoda]
+- CompA
+  - CompC
+  - CompD
+- CompB
+  - CompE [Using Context - data: x methoda]
+
+Exercise:
+
+Session Task: Profile Name Changes
+
+Implement a React component that allows users to change their profile name using the context API.
+
+- The component should consist of two parts:
+
+  - A component called App with a paragraph to display the profile name
+  - A component called Profile that allows users to change their profile name.
+
+- The Profile component should consist of an input field and a button. When the user enters a new name and clicks the button, the profile name should be updated in the App component.

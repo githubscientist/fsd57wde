@@ -1,76 +1,45 @@
 import { createContext, useState } from "react";
-import TaskList from "./components/TaskList";
-import TaskForm from "./components/TaskForm";
-import Notification from "./components/Notification";
+import CompA from "./components/CompA";
+import CompB from "./components/CompB";
 
-export const NotificationContext = createContext();
+// create a context called as NotesContext
+export const NotesContext = createContext();
 
 const App = () => {
 
-    const [tasks, setTasks] = useState([
+    const [notes, setNotes] = useState([
         {
             id: 1,
-            title: 'Task 1',
-            completed: false
+            content: "HTML is easy",
+            date: "2019-05-30T17:30:31.098Z",
+            important: true
         },
         {
             id: 2,
-            title: 'Task 2',
-            completed: true
+            content: "Browser can execute only JavaScript",
+            date: "2019-05-30T18:39:34.091Z",
+            important: false
+        },
+        {
+            id: 3,
+            content: "GET and POST are the most important methods of HTTP protocol",
+            date: "2019-05-30T19:20:14.298Z",
+            important: true
         }
     ]);
 
-    const [notification, setNotification] = useState({
-        message: '',
-        visible: false
-    });
-
-    const showNotification = (message) => {
-        setNotification({
-            message,
-            visible: true
-        });
-
-        setTimeout(() => {
-            setNotification({
-                message: '',
-                visible: false
-            });
-        }, 5000);
-    }
-
-    const addTask = (title) => {
-        const newTask = {
-            id: tasks.length + 1,
-            title,
-            completed: false
-        };
-
-        setTasks([...tasks, newTask]);
-        showNotification('Task added successfully');
-    }
-
-    const toggleTask = (id) => {
-        const updatedTasks = tasks.map(task => {
-            if (task.id === id) {
-                task.completed = !task.completed;
-            }
-
-            return task;
-        });
-
-        setTasks(updatedTasks);
+    const addNote = (note) => {
+        setNotes([...notes, note]);
+        alert("Note added successfully!");
     }
 
   return (
-    <NotificationContext.Provider value={{ notification, showNotification, addTask, toggleTask, tasks }}>
-        <div>
-            <h1>Task Manager</h1>
-            <Notification />  
-            <TaskList />
-            <TaskForm />
-        </div>
-    </NotificationContext.Provider>
+    <div>
+        <NotesContext.Provider value={{ notes, addNote }}>
+              <CompA />
+              <CompB />
+        </NotesContext.Provider>
+    </div>
   )
 }
 
