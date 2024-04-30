@@ -1,22 +1,15 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />
-  },
-  {
-    path: "/about",
-    element: <About />
-  }
-])
+import { useState } from 'react';
+import products from './assets/product.json';
 
 const App = () => {
-  return <RouterProvider 
-    router={router}
-  />
+
+  const [cart, setCart] = useState(products);
+
+  console.log(cart);
+
+  return (
+    <div>App</div>
+  )
 }
 
 export default App;
