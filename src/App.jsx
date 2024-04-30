@@ -1,20 +1,22 @@
-import { useReducer } from "react";
-import { initialState, reducer } from "./reducers/countReducer";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />
+  },
+  {
+    path: "/about",
+    element: <About />
+  }
+])
 
 const App = () => {
-
-    const [state, dispatch] = useReducer(reducer, initialState);
-
-  return (
-      <div>
-          <h3>Counter: { state.count }</h3>
-          <button onClick={() => dispatch({ type: 'incr' })}>Increment</button>
-          
-          <button onClick={() => dispatch({ type: 'decr' })}>Decrement</button>
-
-          <button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
-    </div>
-  )
+  return <RouterProvider 
+    router={router}
+  />
 }
 
 export default App;
