@@ -33,3 +33,5 @@ React Routes:
 ## Task Link:
 
 https://docs.google.com/document/d/1-qvT8VkH2Bvv16hYm-qNiwfusRSt9ACJmceJLpLV9x8/edit
+
+Asynchronous: a function that operates independently of other functions, either concurrently or at a different time.

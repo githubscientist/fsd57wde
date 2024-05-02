@@ -1,16 +1,10 @@
 import { useLoaderData } from "react-router-dom";
+import axios from "axios";
 
 // make the data available to the component
 export async function loader() {
-    const response = await fetch("https://66339eeef7d50bbd9b4a170f.mockapi.io/todos",
-    {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json"
-      }
-        });
-    const todos = await response.json();
-    return { todos };
+    const todos = await axios.get('https://66339eeef7d50bbd9b4a170f.mockapi.io/todos');
+    return { todos: todos.data };
 }
 
 const Todos = () => {
