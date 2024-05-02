@@ -1,44 +1,35 @@
-# React- Day -2: React
+# React- Day -10: Axios
 
 ## Contents:
 
-- [x] Why react
+[x] Playing around with API
 
-React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
+API: Application Programming Interface
 
-Next.js is a React framework that allows you to build static and server-rendered applications using React and JavaScript.
+API is a set of rules and protocols that allows one software application to communicate with another. It is a software intermediary that allows two applications to talk to each other.
 
-Client Side Rendering (CSR) - It means that the page is rendered in the browser using JavaScript. The server sends a blank HTML page and the browser loads the JavaScript and renders the page.
+REST API: Representational State Transfer
 
-Server Side Rendering (SSR) - It means that the page is rendered on the server and the server sends the fully rendered HTML page to the browser.
+REST API is a set of rules that developers follow when they create their API. One of the rules is that you should be able to get a piece of data (called a resource) when you link to a specific URL.
 
-Single Page Application (SPA) - It is a web application that fits on a single page. It is built using JavaScript and it communicates with the server using APIs.
+REST API is a way to interact with the server using HTTP methods like GET, POST, PATCH, PUT, DELETE.
 
-- [x] Setup react project
+[x] fetch() or Axios  
+[x] Implementing simple CRUD: Create, Read, Update, Delete
 
-- Using Vite to create a new React project:
+GET /todos - Get all todos
+GET /todos/:id - Get a todo
+POST /todos - Create a todo
+PUT /todos/:id - Update a todo
+DELETE /todos/:id - Delete a todo
 
-```bash
-npm create vite@latest
-```
+React Routes:
 
-- provide the project name
-- select the framework (React)
-- select the variant (JavaScript)
-- cd into the project directory
-- run `npm install` to install the dependencies
-- run `npm run dev` to start the development server
+/ - to list all todos
+/add - to add a todo
+/edit/:id - to edit a todo
+/delete/:id - to delete a todo
 
-- [x] Understanding JSX
+## Task Link:
 
-JSX: JavaScript XML allows you to write HTML in React. JSX makes it easier to write and add HTML in React.
-
-- [x] Components (simple HTML layout to reusable react components)
-
-Components are the building blocks of a React application. A component is a reusable piece of code that can be used to build other components.
-
-Component name must start with a capital letter.
-
-- [x] Understanding the components
-- [] Passing data through props
-- [] Deploying react to netlify
+https://docs.google.com/document/d/1-qvT8VkH2Bvv16hYm-qNiwfusRSt9ACJmceJLpLV9x8/edit
