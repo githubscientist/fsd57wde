@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import axios from "axios";
 
 // make the data available to the component
@@ -19,10 +19,7 @@ const Todos = () => {
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
-                        <p><strong>Title:</strong> {todo.title}</p>
-                        <p><strong>Description:</strong> {todo.description}
-                        </p>
-                        <p><strong>Created At: </strong>{todo.createdAt}</p>
+                        <Link to={`/todos/${todo.id}`}><p>{todo.title}</p></Link>
                     </li>
                 ))}
             </ul>
