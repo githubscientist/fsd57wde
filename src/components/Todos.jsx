@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit } from "@fortawesome/free-regular-svg-icons";
 import { set } from "firebase/database";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 // make the data available to the component
 export async function loader() {
@@ -75,6 +76,17 @@ const Todos = () => {
             });
     }
 
+    const handleDelete = (id) => {
+        axios.delete(`https://66339eeef7d50bbd9b4a170f.mockapi.io/todos/${id}`)
+            .then((response) => {
+                alert('Todo deleted successfully!');
+                window.location.reload();
+            })
+            .catch((error) => {
+                alert('Failed to delete todo!');
+            });
+    }
+
   return (
       <div>
           <h1>Todos</h1>
@@ -100,8 +112,14 @@ const Todos = () => {
                         <FontAwesomeIcon
                             icon={faEdit} 
                             onClick={() => handleEdit(todo)}
-                            style={{ cursor: 'pointer' }}
+                            style={{ cursor: 'pointer', marginRight: '20px'}}
                         />
+                        <FontAwesomeIcon
+                            icon={faTrash}
+                            style={{ cursor: 'pointer' }}
+                            onClick={() => handleDelete(todo.id)}
+                        />
+                        
                     </li>
                 ))}
           </ul>
