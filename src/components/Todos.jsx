@@ -11,7 +11,7 @@ const Todos = () => {
 
     const { todos } = useLoaderData();
 
-    console.log(todos);
+    // console.log(todos);
 
   return (
       <div>
