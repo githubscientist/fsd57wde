@@ -1,18 +1,19 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+
+export async function loader({ params: { id } }) {
+
+  // fetch the todo with the given id
+  const { data } = await axios.get(`https://66339eeef7d50bbd9b4a170f.mockapi.io/todos/${id}`);
+
+  // return the todo object
+  return data;
+}
 
 const Todo = () => {
-
-    const { id } = useParams();
-    const [todo, setTodo] = useState({});
-
-    useEffect(() => {
-        axios.get(`https://66339eeef7d50bbd9b4a170f.mockapi.io/todos/${id}`)
-            .then((response) => {
-                setTodo(response.data);
-            })
-    }, []);
+  
+  // get the todo object from the loader
+  const todo = useLoaderData();
 
   return (
       <div>
