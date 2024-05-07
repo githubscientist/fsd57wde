@@ -1,44 +1,115 @@
-# React- Day -2: React
+# Database- Day -1: MySQL
 
-## Contents:
+Contents:
 
-- [x] Why react
+Introduction to database
 
-React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
+Database:
 
-Next.js is a React framework that allows you to build static and server-rendered applications using React and JavaScript.
+- a collection of data
+- data in the form of tables or documents
+- tables are collection of rows and columns: structured databases; e.g. MySQL, PostgreSQL; SQL langauge; Relational databases
+- documents are collection of key-value pairs: unstructured databases; e.g. MongoDB, Elasticsearch; NoSQL language; Non-relational databases
 
-Client Side Rendering (CSR) - It means that the page is rendered in the browser using JavaScript. The server sends a blank HTML page and the browser loads the JavaScript and renders the page.
+what is mysql?
 
-Server Side Rendering (SSR) - It means that the page is rendered on the server and the server sends the fully rendered HTML page to the browser.
+- open-source relational database management system
+- developed by Oracle Corporation
+- SQL language: Structured Query Language
+- used for managing databases
 
-Single Page Application (SPA) - It is a web application that fits on a single page. It is built using JavaScript and it communicates with the server using APIs.
+intro to mysql engines
 
-- [x] Setup react project
+- storage engines: InnoDB, NDB, MariaDB,...
 
-- Using Vite to create a new React project:
+basic queries - create db, table
+insert, update, alter
+select - where clause, distinct, group by, order by, offset, limit
 
-```bash
-npm create vite@latest
+Pre-read:
+https://dev.mysql.com/doc/
+
+To List all databases:
+
+```sql
+show databases;
 ```
 
-- provide the project name
-- select the framework (React)
-- select the variant (JavaScript)
-- cd into the project directory
-- run `npm install` to install the dependencies
-- run `npm run dev` to start the development server
+To show the version of MySQL:
 
-- [x] Understanding JSX
+```sql
+select version();
+```
 
-JSX: JavaScript XML allows you to write HTML in React. JSX makes it easier to write and add HTML in React.
+To create a database:
 
-- [x] Components (simple HTML layout to reusable react components)
+```sql
+create database mydb;
+```
 
-Components are the building blocks of a React application. A component is a reusable piece of code that can be used to build other components.
+To see which database is currently in use:
 
-Component name must start with a capital letter.
+```sql
+select database();
+```
 
-- [x] Understanding the components
-- [] Passing data through props
-- [] Deploying react to netlify
+To select a database:
+
+```sql
+use mydb;
+```
+
+To show all tables in a database:
+
+```sql
+show tables;
+```
+
+To create a table:
+
+```sql
+create table mytable (id int, name varchar(20));
+```
+
+Constraints:
+
+- NOT NULL
+- UNIQUE
+- PRIMARY KEY (combination of NOT NULL and UNIQUE)
+- FOREIGN KEY
+
+To insert data into a table:
+
+```sql
+insert into mytable values (1, 'John');
+```
+
+To add a not null constraint to a column:
+
+```sql
+alter table mytable modify name varchar(20) not null;
+```
+
+To delete all the records from a table:
+
+```sql
+delete from mytable;
+```
+
+To modify the column datatype:
+
+```sql
+alter table mytable modify name varchar(30);
+```
+
+To add a new column:
+
+```sql
+alter table mytable add column email varchar(20);
+```
+
+To select all the columns from the table:
+
+```sql
+select * from mytable;
+```
